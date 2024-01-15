@@ -6,24 +6,28 @@ describe('validations tests suites - isValid', () => {
         const result = isValid(undefined);
         expect(result).toBe(false);
     });
-    test('should return true if gamertag length is equal to 8', () => {
-        const result = isValid("azertyui");
-        expect(result).toBe(true);
-    });
-    test('should return true if gamertag length is more than 8', () => {
-        const result = isValid("azertyui");
-        expect(result).toBe(true);
-    });
     test('should return false if gamertag length is less than 8', () => {
-        const result = isValid("azer");
+        const result = isValid("azert");
         expect(result).toBe(false);
     });
-    test('should return false if no special character', () => {
-        const result = isValid("azer");
+    test('should return false if gamertag doesnt contain special character', () => {
+        const result = isValid("azertyuio");
         expect(result).toBe(false);
     });
-    test('should return true if 1 special character', () => {
-        const result = isValid("azer#");
+    test('should return false if gamertag doesnt contain number', () => {
+        const result = isValid("azertyuio#");
+        expect(result).toBe(false);
+    });
+    test('should return false if gamertag  length > 8 and doenst contain special character and contain at least 1 number', () => {
+        const result = isValid("azertyuio1");
+        expect(result).toBe(false);
+    });
+    test('should return false if gamertag  length > 8 and contain special character and doenst contain at least 1 number', () => {
+        const result = isValid("azertyuio#");
+        expect(result).toBe(false);
+    });
+    test('should return true if gamertag  length > 8 and contain special character and at least 1 number', () => {
+        const result = isValid("azertyuio#1");
         expect(result).toBe(true);
     });
 });
