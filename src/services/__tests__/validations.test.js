@@ -7,27 +7,27 @@ describe('validations tests suites - isValid', () => {
         expect(result).toBe(false);
     });
     test('should return false if gamertag length is less than 8', () => {
-        const result = isValid("azert");
+        const result = isValid('azert');
         expect(result).toBe(false);
     });
     test('should return false if gamertag doesnt contain special character', () => {
-        const result = isValid("azertyuio");
+        const result = isValid('azertyuio');
         expect(result).toBe(false);
     });
     test('should return false if gamertag doesnt contain number', () => {
-        const result = isValid("azertyuio#");
+        const result = isValid('azertyuio#');
         expect(result).toBe(false);
     });
     test('should return false if gamertag  length > 8 and doenst contain special character and contain at least 1 number', () => {
-        const result = isValid("azertyuio1");
+        const result = isValid('azertyuio1');
         expect(result).toBe(false);
     });
     test('should return false if gamertag  length > 8 and contain special character and doenst contain at least 1 number', () => {
-        const result = isValid("azertyuio#");
+        const result = isValid('azertyuio#');
         expect(result).toBe(false);
     });
     test('should return true if gamertag  length > 8 and contain special character and at least 1 number', () => {
-        const result = isValid("azertyuio#1");
+        const result = isValid('azertyuio#1');
         expect(result).toBe(true);
     });
 });
