@@ -19,4 +19,6 @@ jobs:
               run: npm install
             - name: Run prettier for code formating
               run: npm run prettier
+            - name: Run Linter for Code Quality
+              run: npm run lint
 
