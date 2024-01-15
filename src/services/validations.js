@@ -1,4 +1,10 @@
 // TODO: Refactor validation function to follow the defined validations rules
-const isValid = () => Math.random() >= 0.5;
+const isValid = (gamerTag) => {
+    if (gamerTag === undefined) return false;
+    if (gamerTag.length < 8) {
+        return true;
+    }
+    return false;
+};
 
 exports.isValid = isValid;
