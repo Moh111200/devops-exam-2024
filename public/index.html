@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Devops exam using Bootstrap</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
+        <script defer src="main.js"></script>
+    </head>
+    <body
+        class="d-flex h-100 text-center text-bg-dark"
+        id="body"
+        data-new-gr-c-s-check-loaded="14.1093.0"
+        data-gr-ext-installed=""
+        style="
+            background: linear-gradient(
+                90deg,
+                rgba(2, 0, 36, 1) 0%,
+                rgba(9, 9, 121, 1) 35%,
+                rgba(0, 212, 255, 1) 100%
+            );
+        "
+    >
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <div>
+                    <h3 class="float-md-start mb-0">DevOps : The Basics</h3>
+                </div>
+            </header>
+
+            <main class="px-3">
+                <h1>Gamer tag</h1>
+                <p class="lead">
+                    The gamer tag must contain at least eight characters, a
+                    special character and a number. <br/> This functionality
+                    <strong>--- MUST ---</strong> be implemented using Test Driven Development.
+                </p>
+                <main
+                    class="form-signin w-100 m-auto"
+                    style="max-width: 330px; padding: 15px"
+                >
+                    <form>
+                        <div class="form-floating">
+                            <input
+                                type="name"
+                                class="form-control"
+                                id="gamerTagInput"
+                                placeholder="Gamer Tag"
+                                data-testid="gamertag-input"
+                            />
+                        </div>
+                        <p id="gamerTagFeedback"></p>
+                        <button
+                            id="gamerTagCheckButton"
+                            class="w-100 btn btn-lg btn-light fw-bold border-white bg-white"
+                            type="button"
+                            data-testid="check-button"
+                            style="margin-top: 20px"
+                        >
+                            Check
+                        </button>
+                        <button
+                                id="resetButton"
+                                class="w-100 btn btn-lg btn-light border-white bg-white"
+                                type="button"
+                                style="margin-top: 20px"
+                                data-testid="reset-button"
+                        >
+                            Reset
+                        </button>
+                    </form>
+                </main>
+            </main>
+
+            <footer class="mt-auto text-white-50">
+                <p>
+                    Cover template for
+                    <a href="https://getbootstrap.com/" class="text-white"
+                        >Bootstrap</a
+                    >, by
+                    <a href="https://twitter.com/mdo" class="text-white">@mdo</a
+                    >.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
